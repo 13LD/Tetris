@@ -5,14 +5,17 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
+
 import java.awt.event.KeyEvent;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-import tetris.Shape.Tetrominoes;
+import tetris.Facede.Adapter.KeyAdapter;
+import tetris.Facede.Shape.Tetrominoes;
+import java.awt.event.KeyListener;
+import tetris.Facede.ZShape;
 
 
 public class Board extends JPanel implements ActionListener {
@@ -29,21 +32,22 @@ public class Board extends JPanel implements ActionListener {
     int curX = 0;
     int curY = 0;
     JLabel statusbar;
-    Shape curPiece;
+    ZShape curPiece;
     Tetrominoes[] board;
+    Tetrominoes[] values = Tetrominoes.values();
 
 
 
     public Board(Tetris parent) {
 
         setFocusable(true);
-        curPiece = new Shape();
+        curPiece = new ZShape();
         timer = new Timer(400, this);
         timer.start();
 
         statusbar =  parent.getStatusBar();
         board = new Tetrominoes[BoardWidth * BoardHeight];
-        addKeyListener(new TAdapter());
+        addKeyListener(new Adaptee());
         clearBoard();
     }
 
@@ -104,8 +108,8 @@ public class Board extends JPanel implements ActionListener {
             for (int j = 0; j < BoardWidth; ++j) {
                 Tetrominoes shape = shapeAt(j, BoardHeight - i - 1);
                 if (shape != Tetrominoes.NoShape)
-                    drawSquare(g, 0 + j * squareWidth(),
-                            boardTop + i * squareHeight(), shape);
+                    drawSquare(g, j * squareWidth(),
+                            boardTop + i * squareHeight(), Tetrominoes.ZShape);
             }
         }
 
@@ -113,7 +117,7 @@ public class Board extends JPanel implements ActionListener {
             for (int i = 0; i < 4; ++i) {
                 int x = curX + curPiece.x(i);
                 int y = curY - curPiece.y(i);
-                drawSquare(g, 0 + x * squareWidth(),
+                drawSquare(g, x * squareWidth(),
                         boardTop + (BoardHeight - y - 1) * squareHeight(),
                         curPiece.getShape());
             }
@@ -149,7 +153,7 @@ public class Board extends JPanel implements ActionListener {
         for (int i = 0; i < 4; ++i) {
             int x = curX + curPiece.x(i);
             int y = curY - curPiece.y(i);
-            board[(y * BoardWidth) + x] = curPiece.getShape();
+            board[(y * BoardWidth) + x] = Tetrominoes.ZShape;
         }
 
         removeFullLines();
@@ -172,7 +176,7 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-    private boolean tryMove(Shape newPiece, int newX, int newY)
+    private boolean tryMove(ZShape newPiece, int newX, int newY)
     {
         for (int i = 0; i < 4; ++i) {
             int x = newX + newPiece.x(i);
@@ -224,12 +228,13 @@ public class Board extends JPanel implements ActionListener {
 
     private void drawSquare(Graphics g, int x, int y, Tetrominoes shape)
     {
+//        Random col = new Random();
+//        int k = Math.abs(col.nextInt()) % 7 + 1;
         Color colors[] = { new Color(0, 0, 0), new Color(204, 102, 102),
                 new Color(102, 204, 102), new Color(102, 102, 204),
                 new Color(204, 204, 102), new Color(204, 102, 204),
                 new Color(102, 204, 204), new Color(218, 170, 0)
         };
-
 
         Color color = colors[shape.ordinal()];
 
@@ -247,7 +252,9 @@ public class Board extends JPanel implements ActionListener {
                 x + squareWidth() - 1, y + 1);
     }
 
-    class TAdapter extends KeyAdapter {
+//Adaptee
+
+    class Adaptee extends KeyAdapter implements KeyListener {
         public void keyPressed(KeyEvent e) {
 
             if (!isStarted || curPiece.getShape() == Tetrominoes.NoShape) {

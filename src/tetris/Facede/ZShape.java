@@ -1,26 +1,22 @@
-package tetris;
+package tetris.Facede;
 
 import java.util.Random;
-import java.lang.Math;
+
+/**
+ * Created by lysogordima on 17.04.16.
+ */
+public class ZShape implements Shape {
+    public Tetrominoes pieceShape;
+    public int coords[][];
+    public int[][][] coordsTable;
 
 
-public class Shape {
-
-    enum Tetrominoes { NoShape, ZShape, SShape, LineShape,
-        TShape, SquareShape, LShape, MirroredLShape };
-
-    private Tetrominoes pieceShape;
-    private int coords[][];
-    private int[][][] coordsTable;
-
-
-    public Shape() {
+    public ZShape() {
 
         coords = new int[4][2];
-        setShape(Tetrominoes.NoShape);
+        setShape(Tetrominoes.ZShape);
 
     }
-
     public void setShape(Tetrominoes shape) {
 
         coordsTable = new int[][][] {
@@ -42,13 +38,11 @@ public class Shape {
         pieceShape = shape;
 
     }
-
-    private void setX(int index, int x) { coords[index][0] = x; }
-    private void setY(int index, int y) { coords[index][1] = y; }
+    public void setX(int index, int x) { coords[index][0] = x; }
+    public void setY(int index, int y) { coords[index][1] = y; }
     public int x(int index) { return coords[index][0]; }
     public int y(int index) { return coords[index][1]; }
     public Tetrominoes getShape()  { return pieceShape; }
-
     public void setRandomShape()
     {
         Random r = new Random();
@@ -76,12 +70,12 @@ public class Shape {
         return m;
     }
 
-    public Shape rotateLeft()
+    public ZShape rotateLeft()
     {
         if (pieceShape == Tetrominoes.SquareShape)
             return this;
 
-        Shape result = new Shape();
+        ZShape result = new ZShape();
         result.pieceShape = pieceShape;
 
         for (int i = 0; i < 4; ++i) {
@@ -91,12 +85,12 @@ public class Shape {
         return result;
     }
 
-    public Shape rotateRight()
+    public ZShape rotateRight()
     {
         if (pieceShape == Tetrominoes.SquareShape)
             return this;
 
-        Shape result = new Shape();
+        ZShape result = new ZShape();
         result.pieceShape = pieceShape;
 
         for (int i = 0; i < 4; ++i) {
