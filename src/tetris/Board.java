@@ -80,7 +80,7 @@ public class Board extends JPanel implements ActionListener {
         timer.start();
     }
 
-    private void pause()
+    public void pause()
     {
         if (!isStarted)
             return;
@@ -124,7 +124,7 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-    private void dropDown()
+    public void dropDown()
     {
         int newY = curY;
         while (newY > 0) {
@@ -135,20 +135,20 @@ public class Board extends JPanel implements ActionListener {
         pieceDropped();
     }
 
-    private void oneLineDown()
+    public void oneLineDown()
     {
         if (!tryMove(curPiece, curX, curY - 1))
             pieceDropped();
     }
 
 
-    private void clearBoard()
+    public void clearBoard()
     {
         for (int i = 0; i < BoardHeight * BoardWidth; ++i)
             board[i] = Tetrominoes.NoShape;
     }
 
-    private void pieceDropped()
+    public void pieceDropped()
     {
         for (int i = 0; i < 4; ++i) {
             int x = curX + curPiece.x(i);
@@ -162,7 +162,7 @@ public class Board extends JPanel implements ActionListener {
             newPiece();
     }
 
-    private void newPiece()
+    public void newPiece()
     {
         curPiece.setRandomShape();
         curX = BoardWidth / 2 + 1;
@@ -176,7 +176,7 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-    private boolean tryMove(ZShape newPiece, int newX, int newY)
+    public boolean tryMove(ZShape newPiece, int newX, int newY)
     {
         for (int i = 0; i < 4; ++i) {
             int x = newX + newPiece.x(i);
@@ -194,7 +194,7 @@ public class Board extends JPanel implements ActionListener {
         return true;
     }
 
-    private void removeFullLines()
+    public void removeFullLines()
     {
         int numFullLines = 0;
 
@@ -226,7 +226,7 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-    private void drawSquare(Graphics g, int x, int y, Tetrominoes shape)
+    public void drawSquare(Graphics g, int x, int y, Tetrominoes shape)
     {
 //        Random col = new Random();
 //        int k = Math.abs(col.nextInt()) % 7 + 1;
