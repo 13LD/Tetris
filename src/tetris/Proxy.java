@@ -1,20 +1,14 @@
 package tetris;
 
-import tetris.Facede.Game;
+import tetris.State.PressedState;
 
 import javax.swing.*;
-import javax.swing.event.AncestorEvent;
-import javax.swing.event.AncestorListener;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 
 /**
  * Created by lysogordima on 17.04.16.
@@ -59,7 +53,6 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
 
         pane.add(comboBoxPane, BorderLayout.PAGE_START);
         pane.add(cards, BorderLayout.CENTER);
-        setSize(200, 200);
 
     }
     public void itemStateChanged(ItemEvent evt) {
@@ -77,6 +70,7 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         demo.addComponentToPane(frame.getContentPane());
 
         //Display the window.
+
         frame.pack();
         frame.setVisible(true);
     }
@@ -94,13 +88,14 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         }
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
+
                 createAndShowGUI();
             }
         });
     }
     public Proxy()
     {
-
+        setSize(500, 500);
     }
     @Override
     public void actionPerformed(ActionEvent e)
@@ -109,7 +104,6 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
 
         if(cmd.equals("Open") && !inputName.getText().equals(""))
         {
-            dispose();
             try(FileWriter fw = new FileWriter("myFile.txt", true);
                 BufferedWriter bw = new BufferedWriter(fw);
                 PrintWriter out = new PrintWriter(bw))
@@ -118,15 +112,16 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
-            new Tetris();
+            dispose();
+            new PressedState().actionPerformed(e);
         }
         else if (cmd.equals("Open") && inputName.getText().equals("")){
-
+            dispose();
             new Proxy().StartGame();
         }
-
-        if (cmd.equals("Return"))
+        else if (cmd.equals("Return")) {
             System.exit(0);
+        }
     }
 
 }

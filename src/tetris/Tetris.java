@@ -1,5 +1,7 @@
 package tetris;
 
+import tetris.State.BackPressed;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,7 +20,11 @@ public class Tetris extends JFrame implements ActionListener {
         statusbar = new JLabel(" 0");
         add(statusbar, BorderLayout.SOUTH);
         Board board = new Board(this);
-        add(board);
+        add(board,BorderLayout.CENTER);
+        JButton jButton = new JButton("Start Menu");
+        jButton.addActionListener(this);
+        jButton.setActionCommand("Back");
+        add(jButton, BorderLayout.EAST);
         board.start();
 
         setSize(400, 800);
@@ -28,9 +34,13 @@ public class Tetris extends JFrame implements ActionListener {
         setVisible(true);
     }
     @Override
-    public void actionPerformed(ActionEvent e)
+    public void actionPerformed(ActionEvent j)
     {
-        String cmd = e.getActionCommand();
+        String cmd = j.getActionCommand();
+        if (cmd.equals("Back")){
+            dispose();
+            new BackPressed().actionPerformed(j);
+        }
 
     }
 

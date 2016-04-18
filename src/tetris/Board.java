@@ -185,6 +185,7 @@ public class Board extends JPanel implements ActionListener {
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
+
             statusbar.setText("game over");
         }
     }
@@ -241,8 +242,6 @@ public class Board extends JPanel implements ActionListener {
 
     public void drawSquare(Graphics g, int x, int y, Tetrominoes shape)
     {
-//        Random col = new Random();
-//        int k = Math.abs(col.nextInt()) % 7 + 1;
         Color colors[] = { new Color(0, 0, 0), new Color(204, 102, 102),
                 new Color(102, 204, 102), new Color(102, 102, 204),
                 new Color(204, 204, 102), new Color(204, 102, 204),
