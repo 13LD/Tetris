@@ -22,7 +22,7 @@ public class Tetris extends JFrame implements ActionListener {
         add(board);
         board.start();
 
-        setSize(200, 400);
+        setSize(400, 800);
         setTitle("Tetris Game");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -33,11 +33,6 @@ public class Tetris extends JFrame implements ActionListener {
     {
         String cmd = e.getActionCommand();
 
-        if(cmd.equals("Open"))
-        {
-            dispose();
-            new Tetris();
-        }
     }
 
 
@@ -49,9 +44,8 @@ public class Tetris extends JFrame implements ActionListener {
         SwingUtilities.invokeLater(new Runnable(){
 
             @Override
-            public void run()
-            {
-                new Proxy().setVisible(true);
+            public void run(){
+                new Proxy().StartGame();
             }
 
 
