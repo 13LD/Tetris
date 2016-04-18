@@ -1,7 +1,4 @@
-package tetris.Facede;
-
-import java.util.Random;
-import java.lang.Math;
+package tetris.FlyWeight;
 
 
 public interface Shape {

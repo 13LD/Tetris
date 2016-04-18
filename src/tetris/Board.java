@@ -12,15 +12,17 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-import tetris.Facede.Adapter.KeyAdapter;
-import tetris.Facede.Shape.Tetrominoes;
+import tetris.FlyWeight.Adapter.KeyAdapter;
+import tetris.FlyWeight.Shape.Tetrominoes;
 import java.awt.event.KeyListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
-import tetris.Facede.ZShape;
+import tetris.FlyWeight.ZShape;
 
 
 public class Board extends JPanel implements ActionListener {
@@ -265,9 +267,139 @@ public class Board extends JPanel implements ActionListener {
     }
 
 //Adaptee
+    public interface Executor {
+         void Execute();
+    }
+    class  CommandAction1 implements Executor {
+        private User _executor;
+        public CommandAction1 (User _executor)
+        {
+            this._executor = _executor;
+        }
+        public void Execute()
+        {
+            _executor.Action1();
+        }
+    }
+    class  CommandAction2 implements Executor {
+        private User _executor;
+        public CommandAction2 (User _executor)
+        {
+            this._executor = _executor;
+        }
+        public void Execute()
+        {
+            _executor.Action2();
+        }
+    }
+    class  CommandAction3 implements Executor {
+        private User _executor;
+        public CommandAction3 (User _executor)
+        {
+            this._executor = _executor;
+        }
+        public void Execute()
+        {
+            _executor.Action3();
+        }
+    }
+    class  CommandAction4 implements Executor {
+        private User _executor;
+        public CommandAction4 (User _executor)
+        {
+            this._executor = _executor;
+        }
+        public void Execute()
+        {
+            _executor.Action4();
+        }
+    }
+    class  CommandAction5 implements Executor {
+        private User _executor;
+        public CommandAction5 (User _executor)
+        {
+            this._executor = _executor;
+        }
+        public void Execute()
+        {
+            _executor.Action5();
+        }
+    }
+    class  CommandAction6 implements Executor {
+        private User _executor;
+        public CommandAction6 (User _executor)
+        {
+            this._executor = _executor;
+        }
+        public void Execute()
+        {
+            _executor.Action6();
+        }
+    }
+
+    public class User
+    {
+
+        public void Action1()
+        {
+            tryMove(curPiece, curX - 1, curY);
+        }
+
+
+        public void Action2() {
+            tryMove(curPiece, curX + 1, curY);
+        }
+
+
+        public void Action3() {
+            tryMove(curPiece.rotateRight(), curX, curY);
+        }
+
+
+        public void Action4() {
+            tryMove(curPiece.rotateLeft(), curX, curY);
+        }
+
+
+        public void Action5() {
+            dropDown();
+        }
+
+
+        public void Action6() {
+            oneLineDown();
+        }
+    }
+
+    class Invoker
+    {
+        private List<Executor> executorsList = new ArrayList<Executor>();
+        public void takeExecutor(Executor executor){
+            executorsList.add(executor);
+        }
+        public void placeExecutor(Executor executor){
+            executor.Execute();
+        }
+
+    }
 
     class Adaptee extends KeyAdapter implements KeyListener {
         public void keyPressed(KeyEvent e) {
+            User user = new User();
+            CommandAction1 c1 = new CommandAction1(user);
+            CommandAction2 c2 = new CommandAction2(user);
+            CommandAction3 c3 = new CommandAction3(user);
+            CommandAction4 c4 = new CommandAction4(user);
+            CommandAction5 c5 = new CommandAction5(user);
+            CommandAction6 c6 = new CommandAction6(user);
+
+            Invoker invoker = new Invoker();
+            invoker.takeExecutor(c1);
+            invoker.takeExecutor(c2);
+            invoker.takeExecutor(c3);
+            invoker.takeExecutor(c4);
+            invoker.takeExecutor(c5);
+            invoker.takeExecutor(c6);
 
             if (!isStarted || curPiece.getShape() == Tetrominoes.NoShape) {
                 return;
@@ -285,25 +417,26 @@ public class Board extends JPanel implements ActionListener {
 
             switch (keycode) {
                 case KeyEvent.VK_LEFT:
-                    tryMove(curPiece, curX - 1, curY);
+                    invoker.placeExecutor(c1);
+//                    tryMove(curPiece, curX - 1, curY);
                     break;
                 case KeyEvent.VK_RIGHT:
-                    tryMove(curPiece, curX + 1, curY);
+                    invoker.placeExecutor(c2);
                     break;
                 case KeyEvent.VK_DOWN:
-                    tryMove(curPiece.rotateRight(), curX, curY);
+                    invoker.placeExecutor(c3);
                     break;
                 case KeyEvent.VK_UP:
-                    tryMove(curPiece.rotateLeft(), curX, curY);
+                    invoker.placeExecutor(c4);
                     break;
                 case KeyEvent.VK_SPACE:
-                    dropDown();
+                    invoker.placeExecutor(c5);
                     break;
                 case 'd':
-                    oneLineDown();
+                    invoker.placeExecutor(c6);
                     break;
                 case 'D':
-                    oneLineDown();
+                    invoker.placeExecutor(c6);
                     break;
             }
 

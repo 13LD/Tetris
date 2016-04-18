@@ -1,4 +1,4 @@
-package tetris.Facede.Adapter;
+package tetris.FlyWeight.Adapter;
 
 
 import java.awt.event.KeyEvent;

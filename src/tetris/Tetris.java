@@ -54,6 +54,7 @@ public class Tetris extends JFrame implements ActionListener {
 
             @Override
             public void run(){
+
                 new Proxy().StartGame();
             }
 

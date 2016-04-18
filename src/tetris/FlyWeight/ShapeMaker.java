@@ -1,4 +1,4 @@
-package tetris.Facede;
+package tetris.FlyWeight;
 
 import java.util.Random;
 import java.lang.Math;
@@ -52,22 +52,6 @@ public class ShapeMaker extends ZShape implements Shape{
         }
     }
     public void setShape(Tetrominoes shape) {
-//        coordsTable = new int[][][] {
-//                { { 0, 0 },   { 0, 0 },   { 0, 0 },   { 0, 0 } },
-//                { { 0, -1 },  { 0, 0 },   { -1, 0 },  { -1, 1 } },
-//                { { 0, -1 },  { 0, 0 },   { 1, 0 },   { 1, 1 } },
-//                { { 0, -1 },  { 0, 0 },   { 0, 1 },   { 0, 2 } },
-//                { { -1, 0 },  { 0, 0 },   { 1, 0 },   { 0, 1 } },
-//                { { 0, 0 },   { 1, 0 },   { 0, 1 },   { 1, 1 } },
-//                { { -1, -1 }, { 0, -1 },  { 0, 0 },   { 0, 1 } },
-//                { { 1, -1 },  { 0, -1 },  { 0, 0 },   { 0, 1 } }
-//        };
-//
-//        for (int i = 0; i < 4 ; i++) {
-//            for (int j = 0; j < 2; ++j) {
-//                coords[i][j] = coordsTable[shape.ordinal()][i][j];
-//            }
-//        }
         pieceShape = shape;
     }
     public ShapeMaker rotateLeft()

@@ -1,20 +1,20 @@
-package tetris.Facede;
+package tetris.FlyWeight;
 
 import java.util.Random;
 
 /**
  * Created by lysogordima on 17.04.16.
  */
-public class LineShape implements Shape {
+public class SShape implements Shape {
     public Tetrominoes pieceShape;
     public int coords[][];
     public int[][][] coordsTable;
 
 
-    public LineShape() {
+    public SShape() {
 
         coords = new int[4][2];
-        setShape(Tetrominoes.LineShape);
+        setShape(Tetrominoes.SShape);
 
     }
     public void setShape(Tetrominoes shape) {
@@ -70,12 +70,12 @@ public class LineShape implements Shape {
         return m;
     }
 
-    public LineShape rotateLeft()
+    public SShape rotateLeft()
     {
         if (pieceShape == Tetrominoes.SquareShape)
             return this;
 
-        LineShape result = new LineShape();
+        SShape result = new SShape();
         result.pieceShape = pieceShape;
 
         for (int i = 0; i < 4; ++i) {
@@ -85,12 +85,12 @@ public class LineShape implements Shape {
         return result;
     }
 
-    public LineShape rotateRight()
+    public SShape rotateRight()
     {
         if (pieceShape == Tetrominoes.SquareShape)
             return this;
 
-        LineShape result = new LineShape();
+        SShape result = new SShape();
         result.pieceShape = pieceShape;
 
         for (int i = 0; i < 4; ++i) {

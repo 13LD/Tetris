@@ -1,6 +1,4 @@
-package tetris.Facede;
-
-import java.awt.*;
+package tetris.FlyWeight;
 
 /**
  * Created by lysogordima on 17.04.16.
