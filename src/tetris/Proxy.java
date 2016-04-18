@@ -110,6 +110,14 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         if(cmd.equals("Open") && !inputName.getText().equals(""))
         {
             dispose();
+            try(FileWriter fw = new FileWriter("myFile.txt", true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                PrintWriter out = new PrintWriter(bw))
+            {
+                out.println(inputName.getText());
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
             new Tetris();
         }
         else if (cmd.equals("Open") && inputName.getText().equals("")){

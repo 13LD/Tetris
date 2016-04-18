@@ -15,6 +15,11 @@ import javax.swing.Timer;
 import tetris.Facede.Adapter.KeyAdapter;
 import tetris.Facede.Shape.Tetrominoes;
 import java.awt.event.KeyListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import tetris.Facede.ZShape;
 
 
@@ -172,6 +177,14 @@ public class Board extends JPanel implements ActionListener {
             curPiece.setShape(Tetrominoes.NoShape);
             timer.stop();
             isStarted = false;
+            try(FileWriter fw = new FileWriter("myFile.txt", true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                PrintWriter out = new PrintWriter(bw))
+            {
+                out.println(statusbar.getText());
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
             statusbar.setText("game over");
         }
     }
