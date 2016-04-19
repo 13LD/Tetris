@@ -1,13 +1,11 @@
 package tetris;
 
+import tetris.State.BackPressed;
 import tetris.State.PressedState;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 import java.io.*;
 
 /**
@@ -24,7 +22,7 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
 
     public void addComponentToPane(Container pane) {
         JPanel comboBoxPane = new JPanel(); //use FlowLayout
-        String comboBoxItems[] = {TEXTPANEL, BUTTONPANEL };
+        String comboBoxItems[] = {TEXTPANEL};
         JComboBox cb = new JComboBox(comboBoxItems);
         cb.setEditable(false);
         cb.addItemListener(this);
@@ -38,18 +36,20 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         btnn = new JButton("Exit");
         btnn.addActionListener(this);
         btnn.setActionCommand("Return");
+        inputName = new JTextField("", 20);
+
+        card1.add(inputName);
         card1.add(btn);
         card1.add(btnn);
 
-        inputName = new JTextField("", 20);
-        JPanel card2 = new JPanel();
-        card2.add(inputName);
+//        inputName = new JTextField("", 20);
+//        JPanel card2 = new JPanel();
 
 
         //Create the panel that contains the "cards".
         cards = new JPanel(new CardLayout());
-        cards.add(card2, TEXTPANEL);
-        cards.add(card1, BUTTONPANEL);
+//        cards.add(card2, TEXTPANEL);
+        cards.add(card1, TEXTPANEL);
 
         pane.add(comboBoxPane, BorderLayout.PAGE_START);
         pane.add(cards, BorderLayout.CENTER);
@@ -60,10 +60,10 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         cl.show(cards, (String)evt.getItem());
     }
 
-    private static void createAndShowGUI() {
+    private  void createAndShowGUI() {
         //Create and set up the window.
         JFrame frame = new JFrame("Start Menu");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         //Create and set up the content pane.
         Proxy demo = new Proxy();
@@ -71,10 +71,10 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
 
         //Display the window.
 
-        frame.pack();
+        frame.setSize(300, 400);
         frame.setVisible(true);
     }
-    public static void StartGame(){
+    public void StartGame(){
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
         } catch (UnsupportedLookAndFeelException ex) {
@@ -86,24 +86,25 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
         }
+
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-
                 createAndShowGUI();
             }
         });
     }
+
     public Proxy()
     {
-        setSize(500, 500);
+
     }
     @Override
     public void actionPerformed(ActionEvent e)
     {
         String cmd = e.getActionCommand();
 
-        if(cmd.equals("Open") && !inputName.getText().equals(""))
-        {
+        if(cmd.equals("Open") && !inputName.getText().equals("") &&
+                !inputName.getText().equals("Input your name")) {
             try(FileWriter fw = new FileWriter("myFile.txt", true);
                 BufferedWriter bw = new BufferedWriter(fw);
                 PrintWriter out = new PrintWriter(bw))
@@ -112,12 +113,12 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
-            dispose();
             new PressedState().actionPerformed(e);
+            dispose();
+            dispose();
         }
         else if (cmd.equals("Open") && inputName.getText().equals("")){
-            dispose();
-            new Proxy().StartGame();
+            inputName.setText("Input your name");
         }
         else if (cmd.equals("Return")) {
             System.exit(0);

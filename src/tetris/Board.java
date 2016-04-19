@@ -265,8 +265,7 @@ public class Board extends JPanel implements ActionListener {
         g.drawLine(x + squareWidth() - 1, y + squareHeight() - 1,
                 x + squareWidth() - 1, y + 1);
     }
-
-//Adaptee
+//Command
     public interface Executor {
          void Execute();
     }
@@ -382,7 +381,7 @@ public class Board extends JPanel implements ActionListener {
         }
 
     }
-
+//Adaptee
     class Adaptee extends KeyAdapter implements KeyListener {
         public void keyPressed(KeyEvent e) {
             User user = new User();

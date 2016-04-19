@@ -38,8 +38,8 @@ public class Tetris extends JFrame implements ActionListener {
     {
         String cmd = j.getActionCommand();
         if (cmd.equals("Back")){
-            dispose();
             new BackPressed().actionPerformed(j);
+            dispose();
         }
 
     }
@@ -56,6 +56,7 @@ public class Tetris extends JFrame implements ActionListener {
             public void run(){
 
                 new Proxy().StartGame();
+
             }
 
 
