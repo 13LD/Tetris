@@ -20,8 +20,12 @@ public class Tetris extends JFrame implements ActionListener {
         statusbar = new JLabel(" 0");
         add(statusbar, BorderLayout.SOUTH);
         Board board = new Board(this);
+        board.setBackground(Color.lightGray);
         add(board,BorderLayout.CENTER);
         JButton jButton = new JButton("Start Menu");
+        jButton.setBackground(Color.ORANGE);
+        jButton.setContentAreaFilled(false);
+        jButton.setOpaque(true);
         jButton.addActionListener(this);
         jButton.setActionCommand("Back");
         add(jButton, BorderLayout.EAST);

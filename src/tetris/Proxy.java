@@ -25,16 +25,31 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         String comboBoxItems[] = {TEXTPANEL};
         JComboBox cb = new JComboBox(comboBoxItems);
         cb.setEditable(false);
+        cb.setBackground(Color.ORANGE);
         cb.addItemListener(this);
         comboBoxPane.add(cb);
+        comboBoxPane.setBackground(Color.RED);
 
         //Create the "cards".
         JPanel card1 = new JPanel();
+        card1.setBackground(Color.RED);
+        card1.setOpaque(true);
+
         btn = new JButton("Start Game");
         btn.addActionListener(this);
         btn.setActionCommand("Open");
+
+        btn.setBackground(Color.ORANGE);
+        btn.setContentAreaFilled(false);
+        btn.setOpaque(true);
+
         btnn = new JButton("Exit");
         btnn.addActionListener(this);
+
+        btnn.setBackground(Color.ORANGE);
+        btnn.setContentAreaFilled(false);
+        btnn.setOpaque(true);
+
         btnn.setActionCommand("Return");
         inputName = new JTextField("", 20);
 
@@ -42,17 +57,14 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         card1.add(btn);
         card1.add(btnn);
 
-//        inputName = new JTextField("", 20);
-//        JPanel card2 = new JPanel();
-
 
         //Create the panel that contains the "cards".
         cards = new JPanel(new CardLayout());
-//        cards.add(card2, TEXTPANEL);
         cards.add(card1, TEXTPANEL);
 
         pane.add(comboBoxPane, BorderLayout.PAGE_START);
         pane.add(cards, BorderLayout.CENTER);
+
 
     }
     public void itemStateChanged(ItemEvent evt) {
@@ -70,7 +82,6 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         demo.addComponentToPane(frame.getContentPane());
 
         //Display the window.
-
         frame.setSize(300, 400);
         frame.setVisible(true);
     }
@@ -96,7 +107,6 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
 
     public Proxy()
     {
-
     }
     @Override
     public void actionPerformed(ActionEvent e)
@@ -119,6 +129,7 @@ public class Proxy extends JFrame implements ActionListener,ItemListener {
         }
         else if (cmd.equals("Open") && inputName.getText().equals("")){
             inputName.setText("Input your name");
+            inputName.setBackground(Color.lightGray);
         }
         else if (cmd.equals("Return")) {
             System.exit(0);
