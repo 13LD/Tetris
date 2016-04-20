@@ -10,7 +10,7 @@ import javax.swing.*;
 
 
 
-
+//Contoller part
 public class Tetris extends JFrame implements ActionListener {
 
     JLabel statusbar;

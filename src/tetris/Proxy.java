@@ -11,9 +11,12 @@ import java.io.*;
 /**
  * Created by lysogordima on 17.04.16.
  */
+
+
+//Controller part
 public class Proxy extends JFrame implements ActionListener,ItemListener {
     JPanel cards; //a panel that uses CardLayout
-    final static String BUTTONPANEL = "Start Menu";
+//    final static String BUTTONPANEL = "Start Menu";
     final static String TEXTPANEL = "Enter your name";
 
     public JButton btn;

@@ -23,8 +23,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tetris.FlyWeight.ZShape;
+import tetris.State.State;
 
-
+//View part
 public class Board extends JPanel implements ActionListener {
 
 
@@ -265,6 +266,13 @@ public class Board extends JPanel implements ActionListener {
         g.drawLine(x + squareWidth() - 1, y + squareHeight() - 1,
                 x + squareWidth() - 1, y + 1);
     }
+
+
+
+
+
+
+
 //Command
     public interface Executor {
          void Execute();
@@ -381,6 +389,20 @@ public class Board extends JPanel implements ActionListener {
         }
 
     }
+
+
+
+//State for pause
+    class PauseOff extends State  {
+        public PauseOff(){
+           pause();
+        }
+
+    }
+
+
+
+
 //Adaptee
     class Adaptee extends KeyAdapter implements KeyListener {
         public void keyPressed(KeyEvent e) {
@@ -407,7 +429,7 @@ public class Board extends JPanel implements ActionListener {
             int keycode = e.getKeyCode();
 
             if (keycode == 'p' || keycode == 'P') {
-                pause();
+                new PauseOff();
                 return;
             }
 
