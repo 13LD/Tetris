@@ -1,11 +1,11 @@
-package tetris.FlyWeight;
+package tetris;
 
 import java.util.Random;
 import java.lang.Math;
 /**
  * Created by lysogordima on 17.04.16.
  */
-public class ShapeMaker extends ZShape implements Shape{
+public class ShapeMaker  implements Shape{
     ZShape zzShape;
     LShape llShape;
     MirroredLShape mirroredllShape;

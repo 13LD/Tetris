@@ -1,4 +1,4 @@
-package tetris.FlyWeight;
+package tetris;
 
 /**
  * Created by lysogordima on 17.04.16.

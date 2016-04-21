@@ -1,8 +1,5 @@
 package tetris;
 
-import tetris.State.BackPressed;
-import tetris.State.PressedState;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -14,7 +11,7 @@ import java.io.*;
 
 
 //Controller part
-public class Proxy extends JFrame implements ActionListener,ItemListener {
+public class Proxy extends JFrame implements ActionListener, ItemListener, Game {
     JPanel cards; //a panel that uses CardLayout
 //    final static String BUTTONPANEL = "Start Menu";
     final static String TEXTPANEL = "Enter your name";

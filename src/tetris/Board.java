@@ -12,8 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-import tetris.FlyWeight.Adapter.KeyAdapter;
-import tetris.FlyWeight.Shape.Tetrominoes;
+import tetris.Shape.Tetrominoes;
 import java.awt.event.KeyListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -21,9 +20,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
-
-import tetris.FlyWeight.ZShape;
-import tetris.State.State;
 
 //View part
 public class Board extends JPanel implements ActionListener {

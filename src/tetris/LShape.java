@@ -1,4 +1,4 @@
-package tetris.FlyWeight;
+package tetris;
 
 
 import java.util.Random;

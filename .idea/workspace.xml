@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c6be8d9-9079-493a-9892-907614f7fad0" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/Adapter/KeyAdapter.java" afterPath="$PROJECT_DIR$/src/tetris/KeyAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/Adapter/KeyListener.java" afterPath="$PROJECT_DIR$/src/tetris/KeyListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/Game.java" afterPath="$PROJECT_DIR$/src/tetris/Game.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/LShape.java" afterPath="$PROJECT_DIR$/src/tetris/LShape.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/LineShape.java" afterPath="$PROJECT_DIR$/src/tetris/LineShape.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/MirroredLShape.java" afterPath="$PROJECT_DIR$/src/tetris/MirroredLShape.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/SShape.java" afterPath="$PROJECT_DIR$/src/tetris/SShape.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/Shape.java" afterPath="$PROJECT_DIR$/src/tetris/Shape.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/ShapeMaker.java" afterPath="$PROJECT_DIR$/src/tetris/ShapeMaker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/SquareShape.java" afterPath="$PROJECT_DIR$/src/tetris/SquareShape.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/TShape.java" afterPath="$PROJECT_DIR$/src/tetris/TShape.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/FlyWeight/ZShape.java" afterPath="$PROJECT_DIR$/src/tetris/ZShape.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/State/BackPressed.java" afterPath="$PROJECT_DIR$/src/tetris/BackPressed.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/State/PressedState.java" afterPath="$PROJECT_DIR$/src/tetris/PressedState.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tetris/State/State.java" afterPath="$PROJECT_DIR$/src/tetris/State.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TetrisGame/tetris/Board.class" afterPath="$PROJECT_DIR$/out/production/TetrisGame/tetris/Board.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TetrisGame/tetris/Tetris.class" afterPath="$PROJECT_DIR$/out/production/TetrisGame/tetris/Tetris.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tetris/Board.java" afterPath="$PROJECT_DIR$/src/tetris/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tetris/Proxy.java" afterPath="$PROJECT_DIR$/src/tetris/Proxy.java" />
@@ -30,24 +44,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tetris/Board.java">
+      <file leaf-file-name="Tetris.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tetris/Tetris.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
-                <element signature="e#9943#9944#0" expanded="true" />
-                <element signature="e#9973#9974#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tetris.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tetris/Tetris.java">
+      <file leaf-file-name="PressedState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tetris/PressedState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22857143">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/tetris/Proxy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,24 +80,300 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MirroredLShape.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/MirroredLShape.java">
+      <file leaf-file-name="JAVA/tetris" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/tetris">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>tetris</OriginalElement>
+              <nodes>
+                <node x="1709.395256916996" y="1105.5">tetris.Board.CommandAction2</node>
+                <node x="829.5" y="1105.5">tetris.Board.CommandAction3</node>
+                <node x="3285.0" y="1611.5">tetris.SShape</node>
+                <node x="1897.395256916996" y="1105.5">tetris.Board.CommandAction1</node>
+                <node x="743.0" y="1611.5">tetris.MirroredLShape</node>
+                <node x="292.0" y="928.5">tetris.BackPressed</node>
+                <node x="583.0" y="939.5">tetris.Board.PauseOff</node>
+                <node x="330.0" y="2240.5">tetris.Tetris</node>
+                <node x="355.0" y="444.0">tetris.State</node>
+                <node x="1521.395256916996" y="1105.5">tetris.Board.CommandAction6</node>
+                <node x="3772.0" y="1611.5">tetris.TShape</node>
+                <node x="1229.574275362319" y="1105.5">tetris.Board.CommandAction4</node>
+                <node x="2798.0" y="1611.5">tetris.LineShape</node>
+                <node x="641.5" y="1105.5">tetris.Board.CommandAction5</node>
+                <node x="1.0" y="1678.0">tetris.Shape.Tetrominoes</node>
+                <node x="1.0" y="2185.5">tetris.Proxy</node>
+                <node x="1230.0" y="1611.5">tetris.ZShape</node>
+                <node x="1446.0" y="928.5">tetris.Board.Executor</node>
+                <node x="942.5" y="146.5">tetris.Board</node>
+                <node x="2051.801054018445" y="928.5">tetris.Board.Adaptee</node>
+                <node x="882.0" y="873.5">tetris.Board.User</node>
+                <node x="2091.551054018445" y="422.0">tetris.KeyAdapter</node>
+                <node x="1145.0" y="906.0">tetris.Board.Invoker</node>
+                <node x="2091.551054018445" y="0.5">tetris.KeyListener</node>
+                <node x="1769.5" y="1225.5">tetris.Shape</node>
+                <node x="1.0" y="928.5">tetris.PressedState</node>
+                <node x="256.0" y="1611.5">tetris.SquareShape</node>
+                <node x="2204.0" y="1523.5">tetris.ShapeMaker</node>
+                <node x="1717.0" y="1611.5">tetris.LShape</node>
+                <node x="222.75" y="2083.5">tetris.Game</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="tetris.Board.CommandAction2" target="tetris.Board">
+                  <point x="42.0" y="-37.5" />
+                  <point x="1834.395256916996" y="833.0" />
+                  <point x="1471.590909090909" y="833.0" />
+                  <point x="187.090909090909" y="323.5" />
+                </edge>
+                <edge source="tetris.Board.CommandAction4" target="tetris.Board.Executor">
+                  <point x="42.0" y="-37.5" />
+                  <point x="1354.574275362319" y="1085.0" />
+                  <point x="1504.1666666666667" y="1085.0" />
+                  <point x="-11.833333333333258" y="26.0" />
+                </edge>
+                <edge source="tetris.Board.CommandAction4" target="tetris.Board">
+                  <point x="-42.0" y="-37.5" />
+                  <point x="1270.574275362319" y="1055.0" />
+                  <point x="1133.5" y="1055.0" />
+                  <point x="1133.5" y="853.0" />
+                  <point x="1222.1363636363635" y="853.0" />
+                  <point x="-62.36363636363649" y="323.5" />
+                </edge>
+                <edge source="tetris.Board.Adaptee" target="tetris.Board">
+                  <point x="-54.75" y="-26.0" />
+                  <point x="2105.551054018445" y="813.0" />
+                  <point x="1596.3181818181818" y="813.0" />
+                  <point x="311.81818181818176" y="323.5" />
+                </edge>
+                <edge source="tetris.LShape" target="tetris.Shape">
+                  <point x="0.0" y="-169.5" />
+                  <point x="0.0" y="114.0" />
+                </edge>
+                <edge source="tetris.Board.CommandAction2" target="tetris.Board.Executor">
+                  <point x="-42.0" y="-37.5" />
+                  <point x="1750.395256916996" y="1075.0" />
+                  <point x="1551.5" y="1075.0" />
+                  <point x="35.5" y="26.0" />
+                </edge>
+                <edge source="tetris.SShape" target="tetris.Shape">
+                  <point x="0.0" y="-169.5" />
+                  <point x="3517.5" y="1483.0" />
+                  <point x="2070.1666666666665" y="1483.0" />
+                  <point x="120.66666666666652" y="114.0" />
+                </edge>
+                <edge source="tetris.Board.Adaptee" target="tetris.KeyAdapter">
+                  <point x="54.75" y="-26.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="tetris.ZShape" target="tetris.Shape">
+                  <point x="0.0" y="-169.5" />
+                  <point x="1462.5" y="1503.0" />
+                  <point x="1909.2777777777778" y="1503.0" />
+                  <point x="-40.22222222222217" y="114.0" />
+                </edge>
+                <edge source="tetris.Tetris" target="tetris.Game">
+                  <point x="0.0" y="-70.5" />
+                  <point x="446.0" y="2160.0" />
+                  <point x="339.5" y="2160.0" />
+                  <point x="39.25" y="26.0" />
+                </edge>
+                <edge source="tetris.Board.Invoker" target="tetris.Board">
+                  <point x="0.0" y="-48.5" />
+                  <point x="0.0" y="323.5" />
+                </edge>
+                <edge source="tetris.LineShape" target="tetris.Shape">
+                  <point x="0.0" y="-169.5" />
+                  <point x="3030.5" y="1493.0" />
+                  <point x="2029.9444444444443" y="1493.0" />
+                  <point x="80.44444444444434" y="114.0" />
+                </edge>
+                <edge source="tetris.KeyAdapter" target="tetris.KeyListener">
+                  <point x="0.0" y="-48.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="tetris.Shape.Tetrominoes" target="tetris.Shape">
+                  <point x="0.0" y="-103.0" />
+                  <point x="117.5" y="1473.0" />
+                  <point x="1788.611111111111" y="1473.0" />
+                  <point x="-160.8888888888889" y="114.0" />
+                </edge>
+                <edge source="tetris.ShapeMaker" target="tetris.Shape">
+                  <point x="0.0" y="-257.5" />
+                  <point x="2490.0" y="1503.0" />
+                  <point x="1989.7222222222222" y="1503.0" />
+                  <point x="40.22222222222217" y="114.0" />
+                </edge>
+                <edge source="tetris.Board.CommandAction5" target="tetris.Board.Executor">
+                  <point x="42.0" y="-37.5" />
+                  <point x="766.5" y="1065.0" />
+                  <point x="1456.8333333333333" y="1065.0" />
+                  <point x="-59.16666666666674" y="26.0" />
+                </edge>
+                <edge source="tetris.Board.CommandAction3" target="tetris.Board.Executor">
+                  <point x="42.0" y="-37.5" />
+                  <point x="954.5" y="1075.0" />
+                  <point x="1480.5" y="1075.0" />
+                  <point x="-35.5" y="26.0" />
+                </edge>
+                <edge source="tetris.MirroredLShape" target="tetris.Shape">
+                  <point x="0.0" y="-169.5" />
+                  <point x="975.5" y="1493.0" />
+                  <point x="1869.0555555555557" y="1493.0" />
+                  <point x="-80.44444444444434" y="114.0" />
+                </edge>
+                <edge source="tetris.Board.CommandAction3" target="tetris.Board">
+                  <point x="-42.0" y="-37.5" />
+                  <point x="870.5" y="833.0" />
+                  <point x="1097.409090909091" y="833.0" />
+                  <point x="-187.090909090909" y="323.5" />
+                </edge>
+                <edge source="tetris.Board.CommandAction1" target="tetris.Board.Executor">
+                  <point x="-42.0" y="-37.5" />
+                  <point x="1938.395256916996" y="1065.0" />
+                  <point x="1575.1666666666667" y="1065.0" />
+                  <point x="59.16666666666674" y="26.0" />
+                </edge>
+                <edge source="tetris.Board.CommandAction5" target="tetris.Board">
+                  <point x="-42.0" y="-37.5" />
+                  <point x="682.5" y="823.0" />
+                  <point x="1035.0454545454545" y="823.0" />
+                  <point x="-249.4545454545455" y="323.5" />
+                </edge>
+                <edge source="tetris.Board.Executor" target="tetris.Board">
+                  <point x="0.0" y="-26.0" />
+                  <point x="1516.0" y="853.0" />
+                  <point x="1346.8636363636363" y="853.0" />
+                  <point x="62.36363636363626" y="323.5" />
+                </edge>
+                <edge source="tetris.Board.PauseOff" target="tetris.Board">
+                  <point x="22.5" y="-15.0" />
+                  <point x="649.5" y="813.0" />
+                  <point x="972.6818181818182" y="813.0" />
+                  <point x="-311.81818181818176" y="323.5" />
+                </edge>
+                <edge source="tetris.Board.CommandAction1" target="tetris.Board">
+                  <point x="42.0" y="-37.5" />
+                  <point x="2022.395256916996" y="823.0" />
+                  <point x="1533.9545454545455" y="823.0" />
+                  <point x="249.4545454545455" y="323.5" />
+                </edge>
+                <edge source="tetris.Board.PauseOff" target="tetris.State">
+                  <point x="-22.5" y="-15.0" />
+                  <point x="604.5" y="853.0" />
+                  <point x="474.83333333333337" y="853.0" />
+                  <point x="48.33333333333337" y="26.0" />
+                </edge>
+                <edge source="tetris.PressedState" target="tetris.State">
+                  <point x="0.0" y="-26.0" />
+                  <point x="135.5" y="853.0" />
+                  <point x="378.16666666666674" y="853.0" />
+                  <point x="-48.333333333333314" y="26.0" />
+                </edge>
+                <edge source="tetris.SquareShape" target="tetris.Shape">
+                  <point x="0.0" y="-169.5" />
+                  <point x="488.5" y="1483.0" />
+                  <point x="1828.8333333333333" y="1483.0" />
+                  <point x="-120.66666666666674" y="114.0" />
+                </edge>
+                <edge source="tetris.Proxy" target="tetris.Game">
+                  <point x="0.0" y="-125.5" />
+                  <point x="154.5" y="2160.0" />
+                  <point x="261.0" y="2160.0" />
+                  <point x="-39.25" y="26.0" />
+                </edge>
+                <edge source="tetris.BackPressed" target="tetris.State">
+                  <point x="0.0" y="-26.0" />
+                  <point x="0.0" y="26.0" />
+                </edge>
+                <edge source="tetris.TShape" target="tetris.Shape">
+                  <point x="0.0" y="-169.5" />
+                  <point x="4004.5" y="1473.0" />
+                  <point x="2110.3888888888887" y="1473.0" />
+                  <point x="160.8888888888887" y="114.0" />
+                </edge>
+                <edge source="tetris.Board.CommandAction6" target="tetris.Board">
+                  <point x="42.0" y="-37.5" />
+                  <point x="1646.395256916996" y="1085.0" />
+                  <point x="1638.574275362319" y="1085.0" />
+                  <point x="1638.574275362319" y="843.0" />
+                  <point x="1409.2272727272727" y="843.0" />
+                  <point x="124.72727272727275" y="323.5" />
+                </edge>
+                <edge source="tetris.Board.User" target="tetris.Board">
+                  <point x="-1.1368683772161603E-13" y="-81.0" />
+                  <point x="1002.0" y="843.0" />
+                  <point x="1159.7727272727273" y="843.0" />
+                  <point x="-124.72727272727275" y="323.5" />
+                </edge>
+                <edge source="tetris.Board.CommandAction6" target="tetris.Board.Executor">
+                  <point x="-42.0" y="-37.5" />
+                  <point x="1562.395256916996" y="1085.0" />
+                  <point x="1527.8333333333333" y="1085.0" />
+                  <point x="11.833333333333258" y="26.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.8098656446845078" x="220.3454513414934" y="2258.054361756755" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Methods</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myFile.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myFile.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.22857143">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PressedState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tetris/State/PressedState.java">
+      <file leaf-file-name="BackPressed.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tetris/BackPressed.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tetris/State.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tetris/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TShape.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tetris/TShape.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,16 +417,19 @@
         <option value="$PROJECT_DIR$/src/tetris/Facede/Game.java" />
         <option value="$PROJECT_DIR$/src/tetris/State/State.java" />
         <option value="$PROJECT_DIR$/src/tetris/State/UnPressedState.java" />
-        <option value="$PROJECT_DIR$/src/tetris/FlyWeight/ShapeMaker.java" />
-        <option value="$PROJECT_DIR$/src/tetris/State/PressedState.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/myFile.txt" />
         <option value="$PROJECT_DIR$/src/tetris/State/BackPressed.java" />
         <option value="$PROJECT_DIR$/src/tetris/State/PauseOn.java" />
         <option value="$PROJECT_DIR$/src/tetris/State/PauseOff.java" />
         <option value="$PROJECT_DIR$/src/tetris/Board.java" />
-        <option value="$PROJECT_DIR$/src/tetris/Proxy.java" />
+        <option value="$PROJECT_DIR$/src/tetris/FlyWeight/ShapeMaker.java" />
+        <option value="$PROJECT_DIR$/src/tetris/State/PressedState.java" />
+        <option value="$PROJECT_DIR$/src/tetris/FlyWeight/KeyAdapter.java" />
+        <option value="$PROJECT_DIR$/src/tetris/TShape.java" />
+        <option value="$PROJECT_DIR$/src/tetris/State.java" />
         <option value="$PROJECT_DIR$/src/tetris/Tetris.java" />
+        <option value="$PROJECT_DIR$/src/tetris/Proxy.java" />
+        <option value="$PROJECT_DIR$/myFile.txt" />
       </list>
     </option>
   </component>
@@ -154,8 +446,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="461" />
-    <option name="y" value="38" />
+    <option name="x" value="344" />
+    <option name="y" value="55" />
     <option name="width" value="964" />
     <option name="height" value="858" />
   </component>
@@ -230,76 +522,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="State" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TetrisGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FlyWeight" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TetrisGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FlyWeight" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Adapter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TetrisGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -325,15 +547,15 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
@@ -342,6 +564,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/tetris" />
+      <recent name="$PROJECT_DIR$/src/tetris/FlyWeight" />
       <recent name="$PROJECT_DIR$/src/tetris/Facede/Adapter" />
       <recent name="$PROJECT_DIR$/src/tetris/Facede" />
     </key>
@@ -876,7 +1100,8 @@
       <workItem from="1461062238227" duration="6279000" />
       <workItem from="1461076789937" duration="6244000" />
       <workItem from="1461159993058" duration="83000" />
-      <workItem from="1461169397311" duration="4533000" />
+      <workItem from="1461169397311" duration="4561000" />
+      <workItem from="1461184695181" duration="8536000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1460850485852</created>
@@ -932,14 +1157,20 @@
       <option name="project" value="LOCAL" />
       <updated>1461170349443</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="state for pause">
+      <created>1461177202248</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1461177202248</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75610000" />
+    <option name="totallyTimeSpent" value="84174000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="461" y="38" width="964" height="858" extended-state="0" />
+    <frame x="344" y="55" width="964" height="858" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -952,7 +1183,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2991128" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3547718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49273857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -979,7 +1210,8 @@
     <MESSAGE value="1.Flyweight; 2.Adapter; 3.Proxy; 4.State; 5.Command;" />
     <MESSAGE value="Fixed Proxy" />
     <MESSAGE value="fixed interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed interface" />
+    <MESSAGE value="state for pause" />
+    <option name="LAST_COMMIT_MESSAGE" value="state for pause" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -992,14 +1224,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tetris/Tetris.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1014,14 +1238,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#9943#9944#0" expanded="true" />
-            <element signature="e#9973#9974#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/Shape.java">
+    <entry file="file://$PROJECT_DIR$/src/tetris/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
@@ -1043,14 +1264,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="270" column="33" selection-start-line="270" selection-start-column="33" selection-end-line="270" selection-end-column="33" />
-          <folding>
-            <element signature="e#9943#9944#0" expanded="true" />
-            <element signature="e#9973#9974#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/Shape.java">
+    <entry file="file://$PROJECT_DIR$/src/tetris/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1072,14 +1290,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="270" column="33" selection-start-line="270" selection-start-column="33" selection-end-line="270" selection-end-column="33" />
-          <folding>
-            <element signature="e#9943#9944#0" expanded="true" />
-            <element signature="e#9973#9974#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/Shape.java">
+    <entry file="file://$PROJECT_DIR$/src/tetris/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1101,14 +1316,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="270" column="33" selection-start-line="270" selection-start-column="33" selection-end-line="270" selection-end-column="33" />
-          <folding>
-            <element signature="e#9943#9944#0" expanded="true" />
-            <element signature="e#9973#9974#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/Shape.java">
+    <entry file="file://$PROJECT_DIR$/src/tetris/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1165,38 +1377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/LineShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46460176">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/LShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5641593">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/SquareShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53097343">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/TShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/java.awt.event.KeyAdapter">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1245,13 +1425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/Adapter/KeyListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home/src.zip!/java/awt/Container.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3318584">
@@ -1270,33 +1443,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/Adapter/KeyAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/ZShape.java">
+    <entry file="file://$PROJECT_DIR$/src/tetris/ZShape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/ShapeMaker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9714286">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1316,22 +1466,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/tetris">
+    <entry file="file://$PROJECT_DIR$/src/tetris/SShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tetris.FlyWeight">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>JAVA</ID>
-          <OriginalElement>tetris</OriginalElement>
+          <OriginalElement>tetris.FlyWeight</OriginalElement>
           <nodes>
-            <node x="" y="">tetris.Tetris</node>
-            <node x="" y="">tetris.State</node>
-            <node x="" y="">tetris.Proxy</node>
-            <node x="" y="">tetris.Board</node>
-            <node x="" y="">tetris.FlyWeight</node>
+            <node x="115.0" y="99.0">tetris.FlyWeight.ShapeMaker</node>
+            <node x="0.0" y="173.0">tetris.FlyWeight.Adapter</node>
+            <node x="566.0" y="99.0">tetris.FlyWeight.SShape</node>
+            <node x="242.0" y="99.0">tetris.FlyWeight.SquareShape</node>
+            <node x="425.25" y="0.0">tetris.FlyWeight.Shape</node>
+            <node x="811.0" y="99.0">tetris.FlyWeight.ZShape</node>
+            <node x="662.0" y="99.0">tetris.FlyWeight.MirroredLShape</node>
+            <node x="373.0" y="99.0">tetris.FlyWeight.TShape</node>
+            <node x="181.0" y="173.0">tetris.FlyWeight.Game</node>
+            <node x="470.0" y="99.0">tetris.FlyWeight.LShape</node>
+            <node x="0.0" y="99.0">tetris.FlyWeight.LineShape</node>
           </nodes>
           <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="45.0" y="80.0" />
-          <SelectedNodes />
+          <edges>
+            <edge source="tetris.FlyWeight.ZShape" target="tetris.FlyWeight.Shape">
+              <point x="0.0" y="-14.5" />
+              <point x="849.5" y="49.0" />
+              <point x="489.9375" y="49.0" />
+              <point x="30.1875" y="14.5" />
+            </edge>
+            <edge source="tetris.FlyWeight.ShapeMaker" target="tetris.FlyWeight.Shape">
+              <point x="0.0" y="-14.5" />
+              <point x="168.5" y="59.0" />
+              <point x="438.1875" y="59.0" />
+              <point x="-21.5625" y="14.5" />
+            </edge>
+            <edge source="tetris.FlyWeight.SquareShape" target="tetris.FlyWeight.Shape">
+              <point x="0.0" y="-14.5" />
+              <point x="297.5" y="69.0" />
+              <point x="446.8125" y="69.0" />
+              <point x="-12.9375" y="14.5" />
+            </edge>
+            <edge source="tetris.FlyWeight.TShape" target="tetris.FlyWeight.Shape">
+              <point x="0.0" y="-14.5" />
+              <point x="411.5" y="79.0" />
+              <point x="455.4375" y="79.0" />
+              <point x="-4.3125" y="14.5" />
+            </edge>
+            <edge source="tetris.FlyWeight.MirroredLShape" target="tetris.FlyWeight.Shape">
+              <point x="0.0" y="-14.5" />
+              <point x="726.5" y="59.0" />
+              <point x="481.3125" y="59.0" />
+              <point x="21.5625" y="14.5" />
+            </edge>
+            <edge source="tetris.FlyWeight.LShape" target="tetris.FlyWeight.Shape">
+              <point x="0.0" y="-14.5" />
+              <point x="508.0" y="79.0" />
+              <point x="464.0625" y="79.0" />
+              <point x="4.3125" y="14.5" />
+            </edge>
+            <edge source="tetris.FlyWeight.LineShape" target="tetris.FlyWeight.Shape">
+              <point x="0.0" y="-14.5" />
+              <point x="47.5" y="49.0" />
+              <point x="429.5625" y="49.0" />
+              <point x="-30.1875" y="14.5" />
+            </edge>
+            <edge source="tetris.FlyWeight.SShape" target="tetris.FlyWeight.Shape">
+              <point x="0.0" y="-14.5" />
+              <point x="604.0" y="69.0" />
+              <point x="472.6875" y="69.0" />
+              <point x="12.9375" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6850220264317181" x="340.35369774919616" y="208.35369774919616" />
+          <SelectedNodes>
+            <node>tetris.FlyWeight.LineShape</node>
+          </SelectedNodes>
           <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
@@ -1357,62 +1572,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/SShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myFile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37142858">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/State/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/State/BackPressed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42857143">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/State/PressedState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/FlyWeight/MirroredLShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+    <entry file="uml://JAVA/tetris.State">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tetris.State</OriginalElement>
+          <nodes>
+            <node x="129.0" y="79.0">tetris.State.PressedState</node>
+            <node x="88.0" y="0.0">tetris.State.State</node>
+            <node x="0.0" y="79.0">tetris.State.BackPressed</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="tetris.State.PressedState" target="tetris.State.State">
+              <point x="0.0" y="-14.5" />
+              <point x="184.5" y="54.0" />
+              <point x="135.25" y="54.0" />
+              <point x="15.75" y="14.5" />
+            </edge>
+            <edge source="tetris.State.BackPressed" target="tetris.State.State">
+              <point x="0.0" y="-14.5" />
+              <point x="54.5" y="54.0" />
+              <point x="103.75" y="54.0" />
+              <point x="-15.75" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="49.0" y="45.0" />
+          <SelectedNodes>
+            <node>tetris.State.BackPressed</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -1420,9 +1611,153 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tetris.Board">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tetris.Board</OriginalElement>
+          <nodes>
+            <node x="" y="">javax.swing.JComponent</node>
+            <node x="" y="">java.util.EventListener</node>
+            <node x="" y="">java.awt.event.ActionListener</node>
+            <node x="" y="">tetris.Board</node>
+            <node x="" y="">java.awt.MenuContainer</node>
+            <node x="" y="">javax.swing.TransferHandler.HasGetTransferHandler</node>
+            <node x="" y="">java.awt.Container</node>
+            <node x="" y="">javax.accessibility.Accessible</node>
+            <node x="" y="">java.awt.Component</node>
+            <node x="" y="">java.awt.image.ImageObserver</node>
+            <node x="" y="">javax.swing.JPanel</node>
+            <node x="" y="">java.io.Serializable</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="216.0" y="292.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/KeyListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/LineShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/LShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/MirroredLShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/TShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/PressedState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
-            <element signature="e#9943#9944#0" expanded="true" />
-            <element signature="e#9973#9974#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/BackPressed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/KeyAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/SquareShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/ShapeMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0571429">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37142858">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tetris/Tetris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1430,20 +1765,262 @@
     <entry file="file://$PROJECT_DIR$/src/tetris/Proxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tetris/Tetris.java">
+    <entry file="uml://JAVA/tetris">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tetris</OriginalElement>
+          <nodes>
+            <node x="1709.395256916996" y="1105.5">tetris.Board.CommandAction2</node>
+            <node x="829.5" y="1105.5">tetris.Board.CommandAction3</node>
+            <node x="3285.0" y="1611.5">tetris.SShape</node>
+            <node x="1897.395256916996" y="1105.5">tetris.Board.CommandAction1</node>
+            <node x="743.0" y="1611.5">tetris.MirroredLShape</node>
+            <node x="292.0" y="928.5">tetris.BackPressed</node>
+            <node x="583.0" y="939.5">tetris.Board.PauseOff</node>
+            <node x="330.0" y="2240.5">tetris.Tetris</node>
+            <node x="355.0" y="444.0">tetris.State</node>
+            <node x="1521.395256916996" y="1105.5">tetris.Board.CommandAction6</node>
+            <node x="3772.0" y="1611.5">tetris.TShape</node>
+            <node x="1229.574275362319" y="1105.5">tetris.Board.CommandAction4</node>
+            <node x="2798.0" y="1611.5">tetris.LineShape</node>
+            <node x="641.5" y="1105.5">tetris.Board.CommandAction5</node>
+            <node x="1.0" y="1678.0">tetris.Shape.Tetrominoes</node>
+            <node x="1.0" y="2185.5">tetris.Proxy</node>
+            <node x="1230.0" y="1611.5">tetris.ZShape</node>
+            <node x="1446.0" y="928.5">tetris.Board.Executor</node>
+            <node x="942.5" y="146.5">tetris.Board</node>
+            <node x="2051.801054018445" y="928.5">tetris.Board.Adaptee</node>
+            <node x="882.0" y="873.5">tetris.Board.User</node>
+            <node x="2091.551054018445" y="422.0">tetris.KeyAdapter</node>
+            <node x="1145.0" y="906.0">tetris.Board.Invoker</node>
+            <node x="2091.551054018445" y="0.5">tetris.KeyListener</node>
+            <node x="1769.5" y="1225.5">tetris.Shape</node>
+            <node x="1.0" y="928.5">tetris.PressedState</node>
+            <node x="256.0" y="1611.5">tetris.SquareShape</node>
+            <node x="2204.0" y="1523.5">tetris.ShapeMaker</node>
+            <node x="1717.0" y="1611.5">tetris.LShape</node>
+            <node x="222.75" y="2083.5">tetris.Game</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="tetris.Board.CommandAction2" target="tetris.Board">
+              <point x="42.0" y="-37.5" />
+              <point x="1834.395256916996" y="833.0" />
+              <point x="1471.590909090909" y="833.0" />
+              <point x="187.090909090909" y="323.5" />
+            </edge>
+            <edge source="tetris.Board.CommandAction4" target="tetris.Board.Executor">
+              <point x="42.0" y="-37.5" />
+              <point x="1354.574275362319" y="1085.0" />
+              <point x="1504.1666666666667" y="1085.0" />
+              <point x="-11.833333333333258" y="26.0" />
+            </edge>
+            <edge source="tetris.Board.CommandAction4" target="tetris.Board">
+              <point x="-42.0" y="-37.5" />
+              <point x="1270.574275362319" y="1055.0" />
+              <point x="1133.5" y="1055.0" />
+              <point x="1133.5" y="853.0" />
+              <point x="1222.1363636363635" y="853.0" />
+              <point x="-62.36363636363649" y="323.5" />
+            </edge>
+            <edge source="tetris.Board.Adaptee" target="tetris.Board">
+              <point x="-54.75" y="-26.0" />
+              <point x="2105.551054018445" y="813.0" />
+              <point x="1596.3181818181818" y="813.0" />
+              <point x="311.81818181818176" y="323.5" />
+            </edge>
+            <edge source="tetris.LShape" target="tetris.Shape">
+              <point x="0.0" y="-169.5" />
+              <point x="0.0" y="114.0" />
+            </edge>
+            <edge source="tetris.Board.CommandAction2" target="tetris.Board.Executor">
+              <point x="-42.0" y="-37.5" />
+              <point x="1750.395256916996" y="1075.0" />
+              <point x="1551.5" y="1075.0" />
+              <point x="35.5" y="26.0" />
+            </edge>
+            <edge source="tetris.SShape" target="tetris.Shape">
+              <point x="0.0" y="-169.5" />
+              <point x="3517.5" y="1483.0" />
+              <point x="2070.1666666666665" y="1483.0" />
+              <point x="120.66666666666652" y="114.0" />
+            </edge>
+            <edge source="tetris.Board.Adaptee" target="tetris.KeyAdapter">
+              <point x="54.75" y="-26.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="tetris.ZShape" target="tetris.Shape">
+              <point x="0.0" y="-169.5" />
+              <point x="1462.5" y="1503.0" />
+              <point x="1909.2777777777778" y="1503.0" />
+              <point x="-40.22222222222217" y="114.0" />
+            </edge>
+            <edge source="tetris.Tetris" target="tetris.Game">
+              <point x="0.0" y="-70.5" />
+              <point x="446.0" y="2160.0" />
+              <point x="339.5" y="2160.0" />
+              <point x="39.25" y="26.0" />
+            </edge>
+            <edge source="tetris.Board.Invoker" target="tetris.Board">
+              <point x="0.0" y="-48.5" />
+              <point x="0.0" y="323.5" />
+            </edge>
+            <edge source="tetris.LineShape" target="tetris.Shape">
+              <point x="0.0" y="-169.5" />
+              <point x="3030.5" y="1493.0" />
+              <point x="2029.9444444444443" y="1493.0" />
+              <point x="80.44444444444434" y="114.0" />
+            </edge>
+            <edge source="tetris.KeyAdapter" target="tetris.KeyListener">
+              <point x="0.0" y="-48.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="tetris.Shape.Tetrominoes" target="tetris.Shape">
+              <point x="0.0" y="-103.0" />
+              <point x="117.5" y="1473.0" />
+              <point x="1788.611111111111" y="1473.0" />
+              <point x="-160.8888888888889" y="114.0" />
+            </edge>
+            <edge source="tetris.ShapeMaker" target="tetris.Shape">
+              <point x="0.0" y="-257.5" />
+              <point x="2490.0" y="1503.0" />
+              <point x="1989.7222222222222" y="1503.0" />
+              <point x="40.22222222222217" y="114.0" />
+            </edge>
+            <edge source="tetris.Board.CommandAction5" target="tetris.Board.Executor">
+              <point x="42.0" y="-37.5" />
+              <point x="766.5" y="1065.0" />
+              <point x="1456.8333333333333" y="1065.0" />
+              <point x="-59.16666666666674" y="26.0" />
+            </edge>
+            <edge source="tetris.Board.CommandAction3" target="tetris.Board.Executor">
+              <point x="42.0" y="-37.5" />
+              <point x="954.5" y="1075.0" />
+              <point x="1480.5" y="1075.0" />
+              <point x="-35.5" y="26.0" />
+            </edge>
+            <edge source="tetris.MirroredLShape" target="tetris.Shape">
+              <point x="0.0" y="-169.5" />
+              <point x="975.5" y="1493.0" />
+              <point x="1869.0555555555557" y="1493.0" />
+              <point x="-80.44444444444434" y="114.0" />
+            </edge>
+            <edge source="tetris.Board.CommandAction3" target="tetris.Board">
+              <point x="-42.0" y="-37.5" />
+              <point x="870.5" y="833.0" />
+              <point x="1097.409090909091" y="833.0" />
+              <point x="-187.090909090909" y="323.5" />
+            </edge>
+            <edge source="tetris.Board.CommandAction1" target="tetris.Board.Executor">
+              <point x="-42.0" y="-37.5" />
+              <point x="1938.395256916996" y="1065.0" />
+              <point x="1575.1666666666667" y="1065.0" />
+              <point x="59.16666666666674" y="26.0" />
+            </edge>
+            <edge source="tetris.Board.CommandAction5" target="tetris.Board">
+              <point x="-42.0" y="-37.5" />
+              <point x="682.5" y="823.0" />
+              <point x="1035.0454545454545" y="823.0" />
+              <point x="-249.4545454545455" y="323.5" />
+            </edge>
+            <edge source="tetris.Board.Executor" target="tetris.Board">
+              <point x="0.0" y="-26.0" />
+              <point x="1516.0" y="853.0" />
+              <point x="1346.8636363636363" y="853.0" />
+              <point x="62.36363636363626" y="323.5" />
+            </edge>
+            <edge source="tetris.Board.PauseOff" target="tetris.Board">
+              <point x="22.5" y="-15.0" />
+              <point x="649.5" y="813.0" />
+              <point x="972.6818181818182" y="813.0" />
+              <point x="-311.81818181818176" y="323.5" />
+            </edge>
+            <edge source="tetris.Board.CommandAction1" target="tetris.Board">
+              <point x="42.0" y="-37.5" />
+              <point x="2022.395256916996" y="823.0" />
+              <point x="1533.9545454545455" y="823.0" />
+              <point x="249.4545454545455" y="323.5" />
+            </edge>
+            <edge source="tetris.Board.PauseOff" target="tetris.State">
+              <point x="-22.5" y="-15.0" />
+              <point x="604.5" y="853.0" />
+              <point x="474.83333333333337" y="853.0" />
+              <point x="48.33333333333337" y="26.0" />
+            </edge>
+            <edge source="tetris.PressedState" target="tetris.State">
+              <point x="0.0" y="-26.0" />
+              <point x="135.5" y="853.0" />
+              <point x="378.16666666666674" y="853.0" />
+              <point x="-48.333333333333314" y="26.0" />
+            </edge>
+            <edge source="tetris.SquareShape" target="tetris.Shape">
+              <point x="0.0" y="-169.5" />
+              <point x="488.5" y="1483.0" />
+              <point x="1828.8333333333333" y="1483.0" />
+              <point x="-120.66666666666674" y="114.0" />
+            </edge>
+            <edge source="tetris.Proxy" target="tetris.Game">
+              <point x="0.0" y="-125.5" />
+              <point x="154.5" y="2160.0" />
+              <point x="261.0" y="2160.0" />
+              <point x="-39.25" y="26.0" />
+            </edge>
+            <edge source="tetris.BackPressed" target="tetris.State">
+              <point x="0.0" y="-26.0" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="tetris.TShape" target="tetris.Shape">
+              <point x="0.0" y="-169.5" />
+              <point x="4004.5" y="1473.0" />
+              <point x="2110.3888888888887" y="1473.0" />
+              <point x="160.8888888888887" y="114.0" />
+            </edge>
+            <edge source="tetris.Board.CommandAction6" target="tetris.Board">
+              <point x="42.0" y="-37.5" />
+              <point x="1646.395256916996" y="1085.0" />
+              <point x="1638.574275362319" y="1085.0" />
+              <point x="1638.574275362319" y="843.0" />
+              <point x="1409.2272727272727" y="843.0" />
+              <point x="124.72727272727275" y="323.5" />
+            </edge>
+            <edge source="tetris.Board.User" target="tetris.Board">
+              <point x="-1.1368683772161603E-13" y="-81.0" />
+              <point x="1002.0" y="843.0" />
+              <point x="1159.7727272727273" y="843.0" />
+              <point x="-124.72727272727275" y="323.5" />
+            </edge>
+            <edge source="tetris.Board.CommandAction6" target="tetris.Board.Executor">
+              <point x="-42.0" y="-37.5" />
+              <point x="1562.395256916996" y="1085.0" />
+              <point x="1527.8333333333333" y="1085.0" />
+              <point x="11.833333333333258" y="26.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8098656446845078" x="220.3454513414934" y="2258.054361756755" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myFile.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22857143">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

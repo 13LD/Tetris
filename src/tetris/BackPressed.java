@@ -1,8 +1,5 @@
-package tetris.State;
+package tetris;
 
-import tetris.Proxy;
-
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

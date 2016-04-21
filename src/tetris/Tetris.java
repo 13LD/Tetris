@@ -1,7 +1,5 @@
 package tetris;
 
-import tetris.State.BackPressed;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +9,7 @@ import javax.swing.*;
 
 
 //Contoller part
-public class Tetris extends JFrame implements ActionListener {
+public class Tetris extends JFrame implements ActionListener, Game {
 
     JLabel statusbar;
 
@@ -68,4 +66,6 @@ public class Tetris extends JFrame implements ActionListener {
     }
 
 
+    @Override
+    public void StartGame() {}
 }

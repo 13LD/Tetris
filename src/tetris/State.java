@@ -1,4 +1,4 @@
-package tetris.State;
+package tetris;
 
 import javax.swing.*;
 
