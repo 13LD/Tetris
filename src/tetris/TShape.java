@@ -6,7 +6,7 @@ import java.util.Random;
 /**
  * Created by lysogordima on 17.04.16.
  */
-public class TShape implements Shape {
+public class TShape extends Shape {
     public Tetrominoes pieceShape;
     public int coords[][];
     public int[][][] coordsTable;

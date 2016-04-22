@@ -36,7 +36,9 @@ public class Board extends JPanel implements ActionListener {
     int curX = 0;
     int curY = 0;
     JLabel statusbar;
-    ZShape curPiece;
+    Shape cuRPiece;
+    ShapeMaker shapeMaker = new ShapeMaker();
+    ZShape curPiece = new ZShape();
     Tetrominoes[] board;
     Tetrominoes[] values = Tetrominoes.values();
 
@@ -45,13 +47,13 @@ public class Board extends JPanel implements ActionListener {
     public Board(Tetris parent) {
 
         setFocusable(true);
-        curPiece = new ZShape();
+
         timer = new Timer(400, this);
         timer.start();
-
+        cuRPiece = shapeMaker.ShapeMake();
         statusbar =  parent.getStatusBar();
         board = new Tetrominoes[BoardWidth * BoardHeight];
-        addKeyListener(new Adaptee());
+        addKeyListener(new Adapter());
         clearBoard();
     }
 
@@ -185,7 +187,7 @@ public class Board extends JPanel implements ActionListener {
                 e1.printStackTrace();
             }
 
-            statusbar.setText("game over");
+            statusbar.setText("GAME OVER");
         }
     }
 
@@ -232,7 +234,7 @@ public class Board extends JPanel implements ActionListener {
 
         if (numFullLines > 0) {
             numLinesRemoved += numFullLines;
-            statusbar.setText(String.valueOf(numLinesRemoved));
+            statusbar.setText("Score : " + String.valueOf(numLinesRemoved));
             isFallingFinished = true;
             curPiece.setShape(Tetrominoes.NoShape);
             repaint();
@@ -393,15 +395,31 @@ public class Board extends JPanel implements ActionListener {
         public PauseOff(){
            pause();
         }
-
     }
 
 
 
 
-//Adaptee
-    class Adaptee extends KeyAdapter implements KeyListener {
+    class Adapter implements KeyListener{
+        Adaptee adaptee = new Adaptee();
+
+
         public void keyPressed(KeyEvent e) {
+            adaptee.Key(e);
+        }
+
+        public void keyReleased(KeyEvent e) {
+
+        }
+        public void keyTyped(KeyEvent e) {
+
+        }
+    }
+
+    class Adaptee  {
+
+
+        public void Key(KeyEvent e) {
             User user = new User();
             CommandAction1 c1 = new CommandAction1(user);
             CommandAction2 c2 = new CommandAction2(user);
@@ -435,7 +453,6 @@ public class Board extends JPanel implements ActionListener {
             switch (keycode) {
                 case KeyEvent.VK_LEFT:
                     invoker.placeExecutor(c1);
-//                    tryMove(curPiece, curX - 1, curY);
                     break;
                 case KeyEvent.VK_RIGHT:
                     invoker.placeExecutor(c2);
@@ -455,8 +472,12 @@ public class Board extends JPanel implements ActionListener {
                 case 'D':
                     invoker.placeExecutor(c6);
                     break;
+
             }
 
         }
+
     }
+
+
 }

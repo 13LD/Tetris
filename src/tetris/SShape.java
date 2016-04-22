@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * Created by lysogordima on 17.04.16.
  */
-public class SShape implements Shape {
+public class SShape extends Shape {
     public Tetrominoes pieceShape;
     public int coords[][];
     public int[][][] coordsTable;

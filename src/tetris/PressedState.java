@@ -8,13 +8,10 @@ import java.awt.event.ActionListener;
  */
 public class PressedState extends Strategy implements ActionListener {
     public  PressedState(){
-
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        new Tetris();
+        new Tetris().StartGame();
     }
-
-
 }

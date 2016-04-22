@@ -1,8 +1,10 @@
 package tetris;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
 import java.io.*;
 
 /**
@@ -12,13 +14,15 @@ import java.io.*;
 
 //Controller part
 public class Proxy extends JFrame implements ActionListener, ItemListener, Game {
-    JPanel cards; //a panel that uses CardLayout
-//    final static String BUTTONPANEL = "Start Menu";
+    JPanel cards;
     final static String TEXTPANEL = "Enter your name";
 
     public JButton btn;
     public JButton btnn;
     public JTextField inputName;
+    JPanel card1 = new JPanel();
+    private CardLayout cardLayout = new CardLayout();
+
 
     public void addComponentToPane(Container pane) {
         JPanel comboBoxPane = new JPanel(); //use FlowLayout
@@ -28,11 +32,9 @@ public class Proxy extends JFrame implements ActionListener, ItemListener, Game 
         cb.setBackground(Color.ORANGE);
         cb.addItemListener(this);
         comboBoxPane.add(cb);
-        comboBoxPane.setBackground(Color.RED);
+        comboBoxPane.setBackground(Color.WHITE);
 
-        //Create the "cards".
-        JPanel card1 = new JPanel();
-        card1.setBackground(Color.RED);
+
         card1.setOpaque(true);
 
         btn = new JButton("Start Game");
@@ -60,28 +62,25 @@ public class Proxy extends JFrame implements ActionListener, ItemListener, Game 
 
         //Create the panel that contains the "cards".
         cards = new JPanel(new CardLayout());
-        cards.add(card1, TEXTPANEL);
 
+        cards.add(card1, TEXTPANEL);
         pane.add(comboBoxPane, BorderLayout.PAGE_START);
         pane.add(cards, BorderLayout.CENTER);
 
 
     }
     public void itemStateChanged(ItemEvent evt) {
-        CardLayout cl = (CardLayout)(cards.getLayout());
-        cl.show(cards, (String)evt.getItem());
+
     }
 
     private  void createAndShowGUI() {
-        //Create and set up the window.
         JFrame frame = new JFrame("Start Menu");
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //Create and set up the content pane.
         Proxy demo = new Proxy();
         demo.addComponentToPane(frame.getContentPane());
 
-        //Display the window.
+        frame.setLocation(550, 200);
         frame.setSize(300, 400);
         frame.setVisible(true);
     }
@@ -105,9 +104,6 @@ public class Proxy extends JFrame implements ActionListener, ItemListener, Game 
         });
     }
 
-    public Proxy()
-    {
-    }
     @Override
     public void actionPerformed(ActionEvent e)
     {
@@ -124,8 +120,7 @@ public class Proxy extends JFrame implements ActionListener, ItemListener, Game 
                 e1.printStackTrace();
             }
             new PressedState().actionPerformed(e);
-            dispose();
-            dispose();
+
         }
         else if (cmd.equals("Open") && inputName.getText().equals("")){
             inputName.setText("Input your name");

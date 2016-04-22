@@ -1,8 +1,8 @@
 package tetris;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+import java.awt.event.KeyListener;
 
 import javax.swing.*;
 
@@ -14,26 +14,9 @@ public class Tetris extends JFrame implements ActionListener, Game {
     JLabel statusbar;
 
 
-    public Tetris() {
-        statusbar = new JLabel(" 0");
-        add(statusbar, BorderLayout.SOUTH);
-        Board board = new Board(this);
-        board.setBackground(Color.lightGray);
-        add(board,BorderLayout.CENTER);
-        JButton jButton = new JButton("Start Menu");
-        jButton.setBackground(Color.ORANGE);
-        jButton.setContentAreaFilled(false);
-        jButton.setOpaque(true);
-        jButton.addActionListener(this);
-        jButton.setActionCommand("Back");
-        add(jButton, BorderLayout.EAST);
-        board.start();
 
-        setSize(400, 800);
-        setTitle("Tetris Game");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setVisible(true);
+    public Tetris() {
+
     }
     @Override
     public void actionPerformed(ActionEvent j)
@@ -52,12 +35,14 @@ public class Tetris extends JFrame implements ActionListener, Game {
     }
 
     public static void main(String[] args) {
+        Factory factory = new Factory();
+        Game game = factory.getMenu("MainMenu");
         SwingUtilities.invokeLater(new Runnable(){
 
             @Override
             public void run(){
 
-                new Proxy().StartGame();
+                game.StartGame();
 
             }
 
@@ -67,5 +52,34 @@ public class Tetris extends JFrame implements ActionListener, Game {
 
 
     @Override
-    public void StartGame() {}
+    public void StartGame() {
+        statusbar = new JLabel("Score : 0");
+        add(statusbar, BorderLayout.SOUTH);
+        Board board = new Board(this);
+        board.setBackground(Color.lightGray);
+        add(board,BorderLayout.CENTER);
+        JPanel jPanel = new JPanel();
+        JButton jButton = new JButton("Menu");
+
+
+        jButton.setBackground(Color.ORANGE);
+        jButton.setContentAreaFilled(false);
+        jButton.setPreferredSize(new Dimension(80, 50));
+        jButton.setOpaque(true);
+        jButton.addActionListener(this);
+        jButton.setActionCommand("Back");
+
+
+        jPanel.add(jButton, BorderLayout.PAGE_START);
+        add(jPanel, BorderLayout.EAST);
+
+        board.start();
+
+        setSize(400, 800);
+        setTitle("Tetris Game");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
 }
