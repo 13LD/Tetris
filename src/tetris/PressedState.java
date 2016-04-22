@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 /**
  * Created by lysogordima on 18.04.16.
  */
-public class PressedState extends State implements ActionListener {
+public class PressedState extends Strategy implements ActionListener {
     public  PressedState(){
 
     }
